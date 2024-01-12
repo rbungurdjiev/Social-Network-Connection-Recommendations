@@ -74,18 +74,3 @@ public class Connection {
         return null;
     }
 }
-
-
-/*
-                                Theoretical Performance
-   The time complexity of the "suggestConnections" method in the Connection class is O(V * (E + V)),
-   where V is the number of users and E is the number of connections
-   
-   - Outer Loop: Iterating through each user in the graph has a time complexity of O(V)
-
-   - Inner Loop: Within each iteration, the method traverses the entire graph to find connections
-     with shared interests, resulting in a time complexity of O(E + V)
-   
-   - Overall: Multiplying the time complexities of the outer and inner loops gives O(V * (E + V))
-   
-*/
