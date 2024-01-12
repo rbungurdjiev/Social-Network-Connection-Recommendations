@@ -79,16 +79,21 @@ public class Main {
         // Iterate through each user in the userList
         for (User user : userList) {
 
-            //  Display the interests of the current user
+            // Display the interests of the current user
             System.out.println("Interests for " + user.getUserID() + ": " + user.getInterests());
 
-            // Retrieve suggested connections for the current user from the Connection instance
+            // Measure the time taken for the suggestConnections operation
+            long startTime = System.currentTimeMillis();
             Set<String> suggestedConnections = connection1.suggestConnections(user);
+            long endTime = System.currentTimeMillis();
 
             // Display the suggested connections for the current user
             System.out.println("Suggested connections for " + user.getUserID() + ": " + suggestedConnections);
-        }
 
+            // Display the time taken for the suggestConnections operation
+            System.out.println("Time taken: " + (endTime - startTime) + " milliseconds");
+            System.out.println();  // Add a new line for better readability
+        }
     }
 }
 
